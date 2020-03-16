@@ -1,9 +1,21 @@
 # Stanford-CS41W-PHP_Programming
 Stanford Continuing Studies course CS 41W  "PHP Programming" by Eli Lev, Spring 2017 
-Have you ever wondered how professional web developers create their websites? In this hands-on course, students will explore the
-world of programming by learning the fundamental grammar and meaning of the PHP programming language. PHP is a computer scripting
-language that has been used for many years to produce dynamic web pages. Students will come away with a fundamental understanding 
-of PHP that will be applicable to other programming languages. Topics covered will include language basics (syntax, semantics, data
-types), variable basics, control flow structures, functions, file handling, and ways to leverage others’ code through the use of 
-libraries. By the end of the course, students will be able to write and build a program, and will be able to figure out how to 
-solve a problem in a programmatic way.
+
+Final Project Back Story:
+You’ve been selected by Santa Claus (you’re his internet elf) to write a simple web page that will help let people know whether
+they are on the naughty or nice list. You object but he points to the Stanford Continuing Studies Beginning Programming class that
+you’ve been taking so you agree to do it (not that you had much of a choice to begin with – it is Santa after all). You look around
+the web and you find a site that you could model - http://www.emailsanta.com/naughty_nice.asp . You decide to use this as
+your model for Santa’s naughty/nice web page. However you are going to use PHP and your pages will be much cleaner.
+Project Details:
+You can make this project as simple or complex as you want. However, start by making the simplest application possible and then
+make it more complex if you have time. Your site will consist of 2 basic pages. The input page is where you will ask the person
+whether they were naughty or nice (you need to have a minimum of 4 questions with at least 2 possible answers per question).
+In the second page, based on their answers – you will provide a simple certificate indicating if they are naughty or nice.
+
+You can directly use the information from the page at http://www.emailsanta.com/naughty_nice.asp (in other words - use the same
+questions or you can make up your own questions). So your first page (input page from the user) will have something like this
+(no need to make it pretty – just functional):
+
+After a person puts their name and submits the answer to the questions based on the drop downs. Based on those answers – a
+result page is shown to them indicating whether they’re naughty or nice. 

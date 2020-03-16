@@ -1,0 +1,150 @@
+STANFORD CONTINUING STUDIES
+Class Project – Beginning Programming CS41 (by  Eli Lev)
+Spring 2017
+
+Student name: 	Peter Hermann Schuld
+Email: 			peterschuld@yahoo.co.uk
+Student ID: 	90980339 
+Date:			May 26th, 2017
+Grading:		Request for a letter grade
+Appendix:		Sender File.php
+				Receiver File.php
+				
+Software:		XAMPP for Windows v. 3.2.2 (Apache running)
+Browser:		Mozilla Firefox
+Text Editor:	Notepad++ 7.3.3
+			
+			
+CHALLENGES
+
+First, I spent time on understanding the grading mechanism of www.emailsanta.com/naughty_nice.asp.  
+There are four questions asked with three possible answers each.  
+All the first and the second possible answers are treated as ‘nice’. 
+When a user choses only between those 8 out of 12 possible answers, the grading will be “A+”. 
+Therefore, determining the grade can be reduced to counting the numbers of ‘naughty’ answers (i.e. number of third answers). 
+An integer variable $grade can calculate a numerical grade (from 0 to 4) by counting only the ‘naughty’ answers, ignoring everything else.  
+In addition, a ‘naughty’ answer to the 4th question triggers a postscript from Santa Claus. 
+
+Second, I have copied Q&A text from the view source (line 249-) to a text file (see appendix below). 
+In addition, I have copied certificate text from the web page. 
+
+Third, develop the sequence of my program (pre-coding). 
+1.)	Print questionnaire text
+2.)	Ask the user to input the first name and save as $username
+3.)	Ask the user four questions with three possible answers each and save the answers 
+4.)	Ask the user to submit the answer sheet 
+5.)	Open new page and print general ‘naught-nice-list’ text on top
+6.)	Calculate the numerical grade based on the number of ‘naughty’ answers
+7.)	Verify that a username has been entered. 
+	Otherwise assign the username “Rupert the reindeer”
+8.)	Print one of five grade certificates for username signed by Santa Claus.  
+	$grade=0	letter grades “A+”
+	$grade=1	letter grade “B+”
+	$grade=2	letter grade “C+”
+	$grade=3	just failed
+	$grade=4	totally failed
+9.)	Print a postscript if the user has given a ‘naughty’ answer to question no.4 
+
+
+Forth, write the program code. The sender file covers tasks 1-4 in sequential order (no loops). It contains only HTML script using forms (questionnaire) and storing the username and the answers in form variables.  
+The POST METHOD sends the form input in an HTTP header. The receiver file (PHP script) starts initializing the form variables $username and the answer variables to the four question ($play_nicely, $room_clean, $tell_truth, $what_snack). 
+The “EXTRACT” function is used to retrieve import variables from $_POST into the current symbol table. The integer variable $grade is defined (no data type definition required in PHP) and is set to zero. 
+Its value is incremented by 1 for each ‘naughty’ answer and ‘nice’ answers are ignored. A succession of “IF/ELSE” statement constructs is applied to determine the numerical grade. 
+Next, one of five certificates get printed according to the value of $grade using “IF” statement constructs. Every certificate gets a Santa Claus signature and some text. 
+A postscript is printed if variable $what_snack" (i.e. answer to forth question) equals “socks".  Every certificate gets all the four questions and the given answers printed on the bottom of the page. 
+Thus every form variable from sender page is used on receiver file (i.e. both nice and naught answers).       
+
+Finally, the program is repeatedly tested to make sure it runs smoothly. Emphasis is given to the correct calculation of a letter grades and to the faultless extraction of the $_POST variables.  
+I have focused on the functionality of the HTML and PHP script on both files while design features are secondary. The comments should explain my thoughts and help co-programmers to take it from there. 
+
+
+PROBLEMS ENCOUNTERED
+A.)	The “if/else” statement constructs use round brackets “()” and curved brackets “{}”. Several error messages have appeared.
+	Solution: I have used a magnifying glass to identify the correct spelling on the lab print outs. In addition, www.php.net was consulted. 
+
+B.)	Some of the question drop down boxes displayed non-English characters during the execution of Sender File (I run the files on computers located in Germany).
+	Solution:  I have discovered the command <html lang="en"> on  the view-scource of naughty_nice.asp and have inserted it on the top of my Sender File.   
+
+
+APPENDIX:	Copied text from view-source and my comments on the grading on www.emailsanta.com/naughty_nice.asp
+
+TEXT
+Santa Claus' Naughty or Nice List 2017
+Check whether you're on Santa's Good List or Bad List!
+Just answer a few quick questions below.
+Your ranking will go straight to
+Santa's Naughty or Nice List so no fibbing!
+(After all, you never know when an elf might be watching!)
+
+And remember, he's making a list... checking it twice!  Gonna find out who's naughty and nice!  
+He sees you when you're sleeping.  He knows when you're awake.  He knows if you've been bad or good.  So be good for goodness sake!
+
+
+
+QUESTIONS AND DROP DOWN ANSWERS
+
+DO YOU PLAY NICELY WITH OTHERS?
+I share and play nicely almost all the time!									; 	'nice' answer
+Well, sometimes I play nicely with others, even if they don't play nice			;	'nice' answer
+I want to be a wrestler when I grow up so I practice on everyone I can find!	;	'naughty' answer
+
+DO YOU KEEP YOUR ROOM CLEAN?
+My room is usually so clean it sparkles like tinsel on a Christmas tree!		;	'nice' answer
+I can see the floor of my room (well, sometimes anyway)							;	'nice' answer
+Small children and pets have gone missing in my room for weeks					;	'naughty' answer
+
+DO YOU TELL THE TRUTH, EVEN IF YOU'RE ASKED IF YOU WERE NAUGHTY?		
+I always try to tell the truth, even if I did something naughty					;	'nice' answer
+I tell the truth after a little bit, even though I really don’t want to			;	'nice' answer
+I always fib and blame stuff on someone else when I’ve been bad					;	'naughty' answer
+
+WHAT SNACK ARE YOU LEAVING FOR SANTA THIS YEAR?
+milk and cookies, mince pie or other yummy treats and drinks 					;	'nice' answer
+health food like tofu, rice cakes and granola bars								;	'nice' answer
+smelly socks																	;	'naughty' answer
+
+Naughty or Nice? Click here to find out!										;	Select bottom
+
+
+CERTIFICATES
+
+Letter Grade "A+" 	; No 'naughty' answers)
+
+Ho! Ho! Ho! Peter!
+Congratulations Peter!!  You really are so good that you should be the angel on top of the tree!
+Everyone at the North Pole, including me, is very proud of you Peter!  Keep up the wonderful work!
+Merry Christmas!
+
+
+Letter Grade "B+"	; One 'naughty' answer)
+
+Merry Christmas Peter!
+Way to go Peter!  Your halo may be a little bit crooked but you're definitely on Santa's "Nice List"!  Mrs. Claus and the elves sure do look forward to hearing how you're doing!
+Keep up the great work, Peter!
+Merry Christmas!
+
+
+Letter Grade "C+"	; Two 'naughty' answers)
+
+Ho! Ho! Ho! Peter!
+Congratulations Peter for being on Santa's Nice List!
+Some of the elves were telling me though that they thought you could do even better if you worked a little harder on being good.  That way you could really 'earn your wings'!  (*wink*)!
+Merry Christmas!
+
+
+Failed 				; Three 'naughty' answers)
+
+Dear Peter,
+Ho! Ho! Ho!  You've been a little naughty so far this year haven't you!  Of course, the elves are sure you really haven't been *that* bad! (*wink*)
+The elves are hoping you'll work really hard at being good before Christmas so you'll be on Santa's Nice List by then.  Try hard Peter!  The elves are cheering for you!
+
+
+Totally Failed 		; Four 'naughty' answers)
+
+My Goodness, Peter!
+You're a real little stinker aren't you!  The elves have been talking for a while about whether they can find a lump of coal big enough for you!
+I have to be honest with you Peter, at the rate you're going, it's not looking good for you this year... or next year... or the year after that... (*wink*).  
+Mind you, Mrs. Claus and I have a funny feeling you rather enjoy being a scamp!  (*wink*)
+
+POSTSCRIPT 			; Answer to the 4th question is 'naughty')
+P.S.  You aren't really going to leave me smelly socks for a snack are you?

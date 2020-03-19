@@ -20,3 +20,6 @@ questions or you can make up your own questions). So your first page (input page
 
 After a person puts their name and submits the answer to the questions based on the drop downs. Based on those answers – a
 result page is shown to them indicating whether they’re naughty or nice. 
+
+#### Textbook ####
+(Required) Ellie Quigly with Marko Gargenta, PHP and MySQL by Example, 1st Edition (ISBN 0131875086). hardcover
